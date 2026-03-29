@@ -1,3 +1,20 @@
+:root {
+    --bg-1: #f6efe5;
+    --bg-2: #fce5d9;
+    --surface: #fffaf5;
+    --surface-strong: #ffffff;
+    --ink: #1f1a17;
+    --muted: #6b5d53;
+    --accent: #d65a31;
+    --accent-deep: #a73817;
+    --accent-soft: #ffd8c8;
+    --line: #e9d7ca;
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --shadow-soft: 0 10px 24px rgba(50, 28, 16, 0.08);
+    --shadow-md: 0 18px 36px rgba(50, 28, 16, 0.12);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,35 +22,391 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", "Trebuchet MS", "Gill Sans", sans-serif;
+    color: var(--ink);
     line-height: 1.6;
-    max-width: 1200px;
+    min-height: 100vh;
+    background: linear-gradient(140deg, var(--bg-1), var(--bg-2));
+    position: relative;
+    padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+}
+
+.page-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(214, 90, 49, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 10%, rgba(34, 133, 122, 0.16), transparent 26%),
+        radial-gradient(circle at 72% 86%, rgba(171, 74, 115, 0.13), transparent 25%);
+}
+
+.top-header {
+    max-width: 1120px;
+    margin: 0 auto 1.5rem;
+    padding: 1.2rem clamp(1rem, 3vw, 1.8rem);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 250, 245, 0.8);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    animation: fade-in 0.8s ease-out;
+}
+
+.tag {
+    color: var(--accent-deep);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.brand h1 {
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    line-height: 1.2;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a.active {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
+    display: grid;
+    gap: 1.35rem;
 }
 
-header {
-    background: #2c3e50;
-    color: white;
+.hero,
+.clubs-overview,
+.featured-events,
+.final-cta {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 1rem;
+    padding: clamp(1.1rem, 2.8vw, 2rem);
+    animation: rise-in 0.8s ease-out;
+}
+
+.hero-label {
+    font-weight: 700;
+    color: var(--accent-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.hero h2 {
+    font-size: clamp(1.35rem, 3.6vw, 2.2rem);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+}
+
+.hero-content p {
+    color: var(--muted);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 1.1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.65rem 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background: var(--accent-deep);
+}
+
+.btn-secondary {
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+}
+
+.hero-panel {
+    background: linear-gradient(165deg, #fff2ea, #ffe6d9);
+    border: 1px solid #f4cdb8;
+    border-radius: var(--radius-md);
     padding: 1rem;
-    border-radius: 5px;
 }
 
-nav a {
-    color: white;
-    margin-right: 15px;
+.hero-panel h3 {
+    margin-bottom: 0.65rem;
+    font-size: 1.05rem;
+}
+
+.hero-panel ul {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.hero-panel li {
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 0.7rem;
+    font-weight: 600;
+    color: #533525;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.stat-card {
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 0.95rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+    font-weight: 800;
+    color: var(--accent-deep);
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.clubs-overview,
+.featured-events,
+.final-cta {
+    padding: clamp(1.1rem, 2.5vw, 1.8rem);
+}
+
+.section-heading p {
+    color: var(--accent-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    margin-top: 0.3rem;
+    font-size: clamp(1.2rem, 2.8vw, 1.8rem);
+    line-height: 1.3;
+}
+
+.club-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.club-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0.95rem;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.club-card h3 {
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+}
+
+.club-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.event-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.event-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1rem;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.event-date {
+    display: inline-block;
+    width: fit-content;
+    background: #ffe5d7;
+    color: var(--accent-deep);
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.event-card h3 {
+    line-height: 1.35;
+}
+
+.event-card p {
+    color: var(--muted);
+}
+
+.event-card a {
+    color: var(--accent-deep);
+    font-weight: 700;
     text-decoration: none;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
+.event-card a:hover,
+.event-card a:focus-visible {
+    text-decoration: underline;
+}
+
+.final-cta {
+    text-align: center;
+    background: linear-gradient(180deg, #fff8f3, #ffefe5);
+}
+
+.final-cta h2 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin-bottom: 0.55rem;
+}
+
+.final-cta p {
+    color: var(--muted);
+}
+
+.cta-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
     }
-    
-    nav a {
-        display: block;
-        margin: 10px 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 980px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .club-grid,
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 1rem 0.75rem 1.5rem;
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav a {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .stats,
+    .club-grid,
+    .event-grid {
+        grid-template-columns: 1fr;
     }
 }
