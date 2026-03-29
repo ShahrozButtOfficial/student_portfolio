@@ -3,29 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Clubs & Societies</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var nav = document.createElement('nav');
-        nav.className = 'site-nav';
-        nav.innerHTML = '<a href="index.html">Home</a>' +
-                                        '<a href="clubs.html">Clubs</a>' +
-                                        '<a href="events.html" class="active">Events</a>' +
-                                        '<a href="join.html">Join</a>' +
-                                        '<a href="highlights.html">Highlights</a>';
-        document.body.insertBefore(nav, document.body.firstChild);
-    });
-    </script>
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clubs | University Clubs Portal</title>
-    
-    <!-- Link to your common CSS -->
-    <link rel="stylesheet" href="../styles/style.css">
+    <title>Clubs | Student Clubs Portal</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
@@ -36,12 +15,12 @@
     <!-- Header / Navigation -->
     <header class="top-header">
         <div class="brand">
-            <p class="tag">University Portal</p>
-            <h1>Student Clubs</h1>
+            <p class="tag">Student Life Hub</p>
+            <h1>University Clubs Portal</h1>
         </div>
 
         <!-- Navigation Menu -->
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="clubs.html" class="active">Clubs</a>
             <a href="events.html">Events</a>
@@ -54,10 +33,10 @@
     <main>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="clubs-hero-title">
             <div class="hero-content">
                 <p class="hero-label">Explore Clubs</p>
-                <h2>Find Your Passion Through Student Clubs</h2>
+                <h2 id="clubs-hero-title">Find Your Passion Through Student Clubs</h2>
                 <p>
                     Our university offers a wide range of clubs where students can explore
                     their interests, develop skills, and connect with like-minded people.
@@ -65,7 +44,7 @@
 
                 <!-- Navigation Buttons -->
                 <div class="hero-actions">
-                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
                     <a href="events.html" class="btn btn-primary">View Events</a>
                 </div>
             </div>
@@ -83,79 +62,73 @@
         </section>
 
         <!-- Clubs Overview -->
-        <section class="clubs-overview">
+        <section class="clubs-overview" aria-labelledby="clubs-categories-title">
             <div class="section-heading">
-                <p>Categories</p>
-                <h2>Different Types of Clubs</h2>
+                <p>Our Clubs</p>
+                <h2 id="clubs-categories-title">Different Types of Clubs</h2>
             </div>
 
             <div class="club-grid">
 
                 <!-- Tech Club -->
-                <div class="club-card">
+                <article class="club-card">
                     <h3>Technology Clubs</h3>
                     <p>
-                        Focus on programming, AI, web development, and innovation.
-                        Great for students interested in building technical skills.
+                        Robotics, AI, web development, and product innovation. Participate in hackathons and collaborative projects.
                     </p>
-                </div>
+                </article>
 
                 <!-- Sports Club -->
-                <div class="club-card">
+                <article class="club-card">
                     <h3>Sports Clubs</h3>
                     <p>
-                        Includes football, cricket, basketball, and more. Perfect for
-                        staying active and competing in tournaments.
+                        Football, cricket, basketball, and outdoor adventures. Stay active and compete with university teams.
                     </p>
-                </div>
+                </article>
 
                 <!-- Cultural Club -->
-                <div class="club-card">
+                <article class="club-card">
                     <h3>Cultural Clubs</h3>
                     <p>
-                        Celebrate diversity through music, dance, and cultural events.
-                        A great place for creativity and expression.
+                        Music, dance, theatre, and heritage societies. Celebrate traditions and organize cultural festivals.
                     </p>
-                </div>
+                </article>
 
                 <!-- Debate Club -->
-                <div class="club-card">
+                <article class="club-card">
                     <h3>Debate Society</h3>
                     <p>
-                        Improve your public speaking, argumentation, and critical
-                        thinking skills through debates and competitions.
+                        Competitive debates, Model UN, and public speaking workshops to sharpen your reasoning skills.
                     </p>
-                </div>
+                </article>
 
                 <!-- Photography Club -->
-                <div class="club-card">
+                <article class="club-card">
                     <h3>Photography Club</h3>
                     <p>
-                        Learn photography techniques, editing, and storytelling through
-                        visual media.
+                        Learn photography, editing, and visual storytelling through hands-on projects and exhibitions.
                     </p>
-                </div>
+                </article>
 
                 <!-- Entrepreneurship Club -->
-                <div class="club-card">
+                <article class="club-card">
                     <h3>Entrepreneurship Club</h3>
                     <p>
-                        Develop business ideas, startups, and leadership skills through
-                        workshops and mentorship.
+                        Develop startup ideas and business acumen through workshops, pitch competitions, and mentorship.
                     </p>
-                </div>
+                </article>
 
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="final-cta">
-            <h2>Want to Join a Club?</h2>
-            <p>Take the next step and become part of an exciting student community.</p>
+        <!-- Call to Action Section -->
+        <section class="final-cta" aria-labelledby="clubs-cta-title">
+            <h2 id="clubs-cta-title">Ready to join a club and find your community?</h2>
+            <p>Browse our complete directory and connect with clubs that match your passions and interests.</p>
 
             <div class="cta-actions">
                 <a href="join.html" class="btn btn-primary">Join Now</a>
-                <a href="events.html" class="btn btn-secondary">See Events</a>
+                <a href="events.html" class="btn btn-secondary">See Upcoming Events</a>
             </div>
         </section>
 
@@ -163,54 +136,3 @@
 
 </body>
 </html>
-<body>
-    <main class="clubs-page">
-        <header>
-            <h1>Clubs & Societies</h1>
-            <p>Explore a variety of student-run clubs that help you learn new skills, stay active, celebrate culture, and sharpen public speaking.</p>
-        </header>
-
-    <section id="technology-clubs" class="club-category">
-        <h2>Technology Clubs</h2>
-        <p>Hands-on groups focused on programming, robotics, AI, and product development. Members participate in workshops, hackathons, and collaborative projects to build practical skills.</p>
-        <ul>
-            <li>Robotics Club — hardware + embedded systems projects</li>
-            <li>Programming & Web Dev — coding workshops and open-source collaboration</li>
-            <li>AI & Data Science Society — competitions, study-groups, and research talks</li>
-        </ul>
-    </section>
-
-    <section id="sports-clubs" class="club-category">
-        <h2>Sports Clubs</h2>
-        <p>Teams and recreational groups promoting fitness, teamwork, and friendly competition across a variety of sports and activities.</p>
-        <ul>
-            <li>Football & Cricket Teams — interuniversity competitions</li>
-            <li>Basketball & Volleyball — regular training & social matches</li>
-            <li>Outdoor Adventures — hiking, climbing and expedition planning</li>
-        </ul>
-    </section>
-
-    <section id="cultural-clubs" class="club-category">
-        <h2>Cultural Clubs</h2>
-        <p>Celebrate traditions, arts, and music. These clubs organize festivals, performances, and workshops that foster cultural exchange and creativity.</p>
-        <ul>
-            <li>Music & Dance Societies — concerts, recitals, and choreography</li>
-            <li>Language & Heritage Clubs — events and community outreach</li>
-            <li>Drama & Film — theatre productions and film screenings</li>
-        </ul>
-    </section>
-
-    <section id="debate-societies" class="club-category">
-        <h2>Debate Societies</h2>
-        <p>For students who enjoy research, argumentation, and public speaking. Societies host debates, model UNs, and workshops to develop reasoning and presentation skills.</p>
-        <ul>
-            <li>Competitive Debate Team — national & regional tournaments</li>
-            <li>Model United Nations — simulations and diplomacy training</li>
-            <li>Public Speaking Workshops — confidence and delivery practice</li>
-        </ul>
-    </section>
-
-    <footer class="clubs-footer">
-        <p>Want to join or start a club? Contact the Student Affairs office or visit the clubs portal for meeting times and membership details.</p>
-    </footer>
-</main>
