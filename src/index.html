@@ -4,22 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Clubs Portal</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <header>
-        <h1>University Clubs Portal</h1>
-        <nav>
-            <a href="index.html">Home</a>
+    <div class="page-bg"></div>
+
+    <header class="top-header">
+        <div class="brand">
+            <p class="tag">Student Life Hub</p>
+            <h1>University Clubs Portal</h1>
+        </div>
+        <nav class="main-nav" aria-label="Primary navigation">
+            <a href="index.html" class="active">Home</a>
             <a href="clubs.html">Clubs</a>
             <a href="events.html">Events</a>
             <a href="join.html">Join</a>
             <a href="highlights.html">Highlights</a>
         </nav>
     </header>
+
     <main>
-        <h2>Welcome to Campus Life!</h2>
-        <p>Content coming soon...</p>
+        <section class="hero" aria-labelledby="welcome-heading">
+            <div class="hero-content">
+                <p class="hero-label">Welcome to Campus Life</p>
+                <h2 id="welcome-heading">Find your people, build your story, and make every semester count.</h2>
+                <p>
+                    Explore communities where students collaborate, perform, compete, volunteer, and innovate.
+                    Whether you are new on campus or looking for your next adventure, there is a club waiting for you.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="join.html">Join a Club</a>
+                    <a class="btn btn-secondary" href="clubs.html">Browse Clubs</a>
+                </div>
+            </div>
+            <div class="hero-panel" aria-hidden="true">
+                <h3>What is happening this week</h3>
+                <ul>
+                    <li>Photography Walk at Riverside Park</li>
+                    <li>Code Sprint hosted by Tech Guild</li>
+                    <li>Open Mic Night by Performing Arts Circle</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="stats" aria-label="Club statistics">
+            <article class="stat-card">
+                <p class="stat-number">42</p>
+                <p class="stat-label">Active Clubs</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-number">2,850+</p>
+                <p class="stat-label">Student Members</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-number">96</p>
+                <p class="stat-label">Events This Semester</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-number">18</p>
+                <p class="stat-label">Volunteer Initiatives</p>
+            </article>
+        </section>
+
+        <section class="clubs-overview" aria-labelledby="clubs-heading">
+            <div class="section-heading">
+                <p>Overview of All Clubs</p>
+                <h2 id="clubs-heading">Choose from every club category on campus</h2>
+            </div>
+            <div class="club-grid">
+                <article class="club-card">
+                    <h3>Academic & Professional</h3>
+                    <p>Career talks, case competitions, and peer learning circles for future-ready students.</p>
+                </article>
+                <article class="club-card">
+                    <h3>Arts & Culture</h3>
+                    <p>Dance, music, theatre, film, and cultural societies celebrating creativity and identity.</p>
+                </article>
+                <article class="club-card">
+                    <h3>Technology & Innovation</h3>
+                    <p>Hackathons, coding workshops, robotics showcases, and startup idea labs.</p>
+                </article>
+                <article class="club-card">
+                    <h3>Sports & Wellness</h3>
+                    <p>Competitive teams, recreation groups, and fitness clubs that keep campus active.</p>
+                </article>
+                <article class="club-card">
+                    <h3>Community & Service</h3>
+                    <p>Social outreach, sustainability drives, and meaningful local impact projects.</p>
+                </article>
+                <article class="club-card">
+                    <h3>Leadership & Governance</h3>
+                    <p>Student councils and policy forums focused on leadership, representation, and change.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured-events" aria-labelledby="events-heading">
+            <div class="section-heading">
+                <p>Featured Events</p>
+                <h2 id="events-heading">Upcoming highlights you should not miss</h2>
+            </div>
+            <div class="event-grid">
+                <article class="event-card">
+                    <p class="event-date">April 04</p>
+                    <h3>Interclub Innovation Challenge</h3>
+                    <p>Build practical solutions in mixed teams and present to campus mentors.</p>
+                    <a href="events.html">See details</a>
+                </article>
+                <article class="event-card">
+                    <p class="event-date">April 11</p>
+                    <h3>Campus Cultural Fusion Night</h3>
+                    <p>Experience performances, cuisine booths, and storytelling from diverse cultures.</p>
+                    <a href="events.html">See details</a>
+                </article>
+                <article class="event-card">
+                    <p class="event-date">April 18</p>
+                    <h3>Community Impact Weekend</h3>
+                    <p>Join clubs working with local partners on service and sustainability initiatives.</p>
+                    <a href="events.html">See details</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="final-cta" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Ready to be part of something bigger?</h2>
+            <p>Take your first step into campus life and connect with clubs that match your interests.</p>
+            <div class="cta-actions">
+                <a class="btn btn-primary" href="join.html">Join Now</a>
+                <a class="btn btn-secondary" href="highlights.html">View Club Highlights</a>
+            </div>
+        </section>
     </main>
 </body>
 </html>
