@@ -410,3 +410,129 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+.events-main {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.15rem;
+}
+
+.events-hero,
+.events-cta {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: clamp(1.1rem, 2.6vw, 1.9rem);
+}
+
+.events-hero h2 {
+    font-size: clamp(1.35rem, 3.2vw, 2.15rem);
+    line-height: 1.25;
+    margin-bottom: 0.55rem;
+}
+
+.events-hero p {
+    color: var(--muted);
+}
+
+.events-timeline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.timeline-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 1rem;
+    display: grid;
+    gap: 0.6rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, var(--accent), #ef8a61);
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-date {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 0.45rem;
+    background: #ffe5d7;
+    color: var(--accent-deep);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+}
+
+.timeline-card h3 {
+    margin-left: 0.45rem;
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.timeline-card p {
+    margin-left: 0.45rem;
+    color: var(--muted);
+}
+
+.timeline-card .btn {
+    margin-left: 0.45rem;
+    width: fit-content;
+}
+
+.events-cta {
+    text-align: center;
+    background: linear-gradient(180deg, #fff8f2, #ffefe4);
+}
+
+.events-cta h2 {
+    font-size: clamp(1.2rem, 2.9vw, 1.85rem);
+    line-height: 1.3;
+    margin-bottom: 0.45rem;
+}
+
+.events-cta p {
+    color: var(--muted);
+}
+
+@media (max-width: 980px) {
+    .events-timeline {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .events-hero,
+    .events-cta,
+    .timeline-card {
+        padding: 0.9rem;
+    }
+
+    .timeline-date,
+    .timeline-card h3,
+    .timeline-card p,
+    .timeline-card .btn {
+        margin-left: 0.25rem;
+    }
+}
