@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Join a Club | Student Clubs Portal</title>
+		<link
+			rel="stylesheet"
+			href="/styles/styles.css" />
+	</head>
+	<body class="join-page">
+		<div class="page-bg"></div>
+
+		<header class="top-header">
+			<div class="brand">
+				<p class="tag">Student Life Hub</p>
+				<h1>University Clubs Portal</h1>
+			</div>
+			<nav
+				class="main-nav"
+				aria-label="Primary navigation">
+				<a href="index.html">Home</a>
+				<a href="clubs.html">Clubs</a>
+				<a href="events.html">Events</a>
+				<a
+					href="join.html"
+					class="active"
+					>Join</a
+				>
+				<a href="highlights.html">Highlights</a>
+			</nav>
+		</header>
+
+		<main class="join-main">
+			<section
+				class="join-hero"
+				aria-labelledby="join-title">
+				<div class="join-hero-content">
+					<p class="hero-label">Join a Club</p>
+					<h2 id="join-title">Start your club journey in three simple steps</h2>
+					<p>
+						Choose a club, submit your interest form, and attend the next orientation.
+						Every student can join multiple clubs based on their interests.
+					</p>
+					<div class="hero-actions">
+						<a
+							class="btn btn-primary"
+							href="#join-form"
+							>Apply Now</a
+						>
+						<a
+							class="btn btn-secondary"
+							href="clubs.html"
+							>View Clubs</a
+						>
+					</div>
+				</div>
+				<div
+					class="join-hero-panel"
+					aria-label="How it works">
+					<h3>How it works</h3>
+					<ol>
+						<li>Pick your preferred clubs from the list.</li>
+						<li>Fill in your student details and interests.</li>
+						<li>Receive confirmation and onboarding schedule.</li>
+					</ol>
+				</div>
+			</section>
+
+			<section
+				class="join-form-section"
+				id="join-form"
+				aria-labelledby="join-form-title">
+				<div class="section-heading">
+					<p>Registration Form</p>
+					<h2 id="join-form-title">Submit your membership request</h2>
+				</div>
+
+				<form
+					class="join-form"
+					action="#"
+					method="post">
+					<div class="form-grid">
+						<label>
+							<span>Full Name</span>
+							<input
+								type="text"
+								name="fullName"
+								placeholder="Enter your name"
+								required />
+						</label>
+						<label>
+							<span>University Email</span>
+							<input
+								type="email"
+								name="email"
+								placeholder="you@university.edu"
+								required />
+						</label>
+						<label>
+							<span>Student ID</span>
+							<input
+								type="text"
+								name="studentId"
+								placeholder="e.g. 23CS102"
+								required />
+						</label>
+						<label>
+							<span>Department</span>
+							<input
+								type="text"
+								name="department"
+								placeholder="e.g. Computer Science"
+								required />
+						</label>
+						<label class="full-width">
+							<span>Preferred Club Category</span>
+							<select
+								name="clubCategory"
+								required>
+								<option value="">Select a category</option>
+								<option value="technology">Technology & Innovation</option>
+								<option value="sports">Sports & Wellness</option>
+								<option value="arts">Arts & Culture</option>
+								<option value="service">Community & Service</option>
+								<option value="leadership">Leadership & Governance</option>
+							</select>
+						</label>
+						<label class="full-width">
+							<span>Why do you want to join?</span>
+							<textarea
+								name="motivation"
+								rows="4"
+								placeholder="Tell us your interests and goals"
+								required></textarea>
+						</label>
+					</div>
+					<button
+						type="submit"
+						class="btn btn-primary">
+						Submit Request
+					</button>
+				</form>
+			</section>
+
+			<section
+				class="join-faq"
+				aria-labelledby="faq-title">
+				<div class="section-heading">
+					<p>Need Help?</p>
+					<h2 id="faq-title">Frequently asked questions</h2>
+				</div>
+				<div class="faq-grid">
+					<article class="faq-card">
+						<h3>Can I join more than one club?</h3>
+						<p>
+							Yes, students can join multiple clubs as long as schedules do not
+							overlap.
+						</p>
+					</article>
+					<article class="faq-card">
+						<h3>Is there any membership fee?</h3>
+						<p>
+							Most clubs are free. Some activities may include optional event
+							contributions.
+						</p>
+					</article>
+					<article class="faq-card">
+						<h3>When will I get confirmation?</h3>
+						<p>
+							You will receive an email update within 3 to 5 working days after
+							submission.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section
+				class="join-cta"
+				aria-labelledby="join-cta-title">
+				<h2 id="join-cta-title">Ready to participate in campus life?</h2>
+				<p>Submit your request and begin your club journey this semester.</p>
+				<div class="cta-actions">
+					<a
+						class="btn btn-primary"
+						href="#join-form"
+						>Apply Now</a
+					>
+					<a
+						class="btn btn-secondary"
+						href="events.html"
+						>Explore Events</a
+					>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
